@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+        .list-group{
+            background: -webkit-linear-gradient(right top, blue, red);
+            /* Safari 5.1 - 6.0 */
+            background: -o-linear-gradient(bottom right, blue, red);
+            /* Opera 11.1 - 12.0 */
+            background: -moz-linear-gradient(bottom right, blue, red);
+            /* Firefox 3.6 - 15 */
+            background: linear-gradient(to bottom right, blue, red);
+            /* 标准的语法（必须放在最后） */
+            padding: 20px 40px;
+        }
+        .jumbotron{
+            text-align: center;
+            background: -webkit-linear-gradient(right top, red, blue);
+            /* Safari 5.1 - 6.0 */
+            background: -o-linear-gradient(bottom left, red, blue);
+            /* Opera 11.1 - 12.0 */
+            background: -moz-linear-gradient(bottom left, red, blue);
+            /* Firefox 3.6 - 15 */
+            background: linear-gradient(to bottom left, red, blue);
+            /* 标准的语法（必须放在最后） */
+            margin-bottom: 0px;
+        }
+        li{
+            background: transparent !important;
+        }
+        .list-group-item{
+            color: white;
+            border: none;
+            border-bottom: 1px solid #ddd !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="jumbotron">
+        <h1 style="color:white;margin-bottom: 40px;">蹦迪现场</h1>
+        <p><a href="/post" class="btn btn-primary btn-lg" role="button">Bang Bang Bang</a></p>
+        <img src="../public/images/timg.gif" alt="">
+    </div>
+    <ul class=list-group>
+        <!-- <li class="list-group-item">
+            <p>abcd说：def</p>
+        </li> -->
+        <!-- {{name}}
+        {{age}}
+        {{fruits}}
+        {{each fruits}}
+        <span>{{$index}}</span>
+        <p>{{$value}}</p>
+        {{/each}} -->
+        {{ each comments }}
+        <li class="list-group-item">
+            <p>{{$value.name}}：{{$value.content}}</p>
+        </li>
+        {{/each}}
+    </ul>
+    <!-- <ul class="list-group">
+
+        <li class="list-group-item">
+            <p>pilipilipi说：palapalapla</p>
+        </li>
+
+        <li class="list-group-item">
+            <p>blabalabal说：bilibilibili</p>
+        </li>
+
+        <li class="list-group-item">
+            <p>qwer说：去玩儿sdfdsfsd</p>
+        </li>
+
+        <li class="list-group-item">
+            <p>张三说：今天天气不错</p>
+        </li>
+
+        <li class="list-group-item">
+            <p>张11说：44今天天气不错</p>
+        </li>
+
+        <li class="list-group-item">
+            <p>张22说：11今天天气不错</p>
+        </li>
+
+        <li class="list-group-item">
+            <p>张33说：22今天天气不错</p>
+        </li>
+
+    </ul> -->
+</body>
+
+</html>
